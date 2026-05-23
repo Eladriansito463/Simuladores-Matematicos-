@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plataforma de Simuladores Interactivos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="container">
+        <header class="header-proyecto">
+            <h2>Simuladores Matemáticos</h2>
+            <p class="subtitle">Desafío Técnico de Programación Web</p>
+        </header>
+
+        <section class="panel-tecnologico">
+            <span class="panel-numero">01</span>
+            <h3>1. Descripción del Trabajo</h3>
+            <p>
+                Plataforma interactiva diseñada para la resolución de modelos probabilísticos y físicos. 
+                Traduce ecuaciones complejas en funciones lógicas utilizando <span class="resaltado-cian">JavaScript </span>puro.
+            </p>
+        </section>
+
+        <section class="panel-tecnologico">
+            <span class="panel-numero">02</span>
+            <h3>2. Fundamento: Transferencia de Calor</h3>
+            <p>
+                Calcula la temperatura final de un objeto tras transcurrir un tiempo determinado (<span class="resaltado-magenta">t</span>) dentro de una atmósfera a temperatura constante.
+        </section>
+
+        <section class="panel-tecnologico">
+            <span class="panel-numero">03</span>
+            <h3>3. Simulador de Temperatura</h3>
+            
+            <form id="form-calor" onsubmit="event.preventDefault(); calcularTemperatura();">
+                <div class="input-group">
+                    <label for="temp_inicial">Temperatura Inicial (T₀) °C:</label>
+                    <input type="number" id="temp_inicial" value="120" step="any" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="temp_entorno">Temperatura Entorno (T_s) °C:</label>
+                    <input type="number" id="temp_entorno" value="38" step="any" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="constante_k">Constante de Enfriamiento (k):</label>
+                    <input type="number" id="constante_k" value="0.45" step="any" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="tiempo_t">Tiempo transcurrido (t) en horas:</label>
+                    <input type="number" id="tiempo_t" value="3" step="any" min="0" required>
+                </div>
+
+                <button type="submit">Ejecutar Simulación Térmica</button>
+            </form>
+
+            <div id="resultado-calor-container" class="resultado-box hidden">
+                <h3>Cálculo Finalizado:</h3>
+                <p>Temperatura estimada: <strong id="resultado-calor-valor">--</strong> °C</p>
+            </div>
+        </section>
+
+        <section class="panel-tecnologico">
+            <span class="panel-numero">04</span>
+            <h3>4. Fundamento: Combinatorio Sorteo</h3>
+            <p>
+                Calcula las combinaciones posibles para una selección simultánea en dos grupos independientes. El resultado es el producto de ambos subgrupos aplicando factoriales de manera iterativa[cite: 22, 27].
+            </p>
+        </section>
+
+        <section class="panel-tecnologico">
+            <span class="panel-numero">05</span>
+            <h3>5. Calculador de Combinaciones</h3>
+            
+            <form id="form-combinaciones" onsubmit="event.preventDefault(); calcularCombinaciones();">
+                <div class="form-row">
+                    <div class="input-group">
+                        <label for="n1">Grupo 1 - Elementos (n₁):</label>
+                        <input type="number" id="n1" value="59" min="0" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="r1">Grupo 1 - Selección (r₁):</label>
+                        <input type="number" id="r1" value="5" min="0" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="input-group">
+                        <label for="n2">Grupo 2 - Elementos (n₂):</label>
+                        <input type="number" id="n2" value="35" min="0" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="r2">Grupo 2 - Selección (r₂):</label>
+                        <input type="number" id="r2" value="1" min="0" required>
+                    </div>
+                </div>
+
+                <button type="submit">Calcular Combinaciones Totales</button>
+            </form>
+
+            <div id="resultado-comb-container" class="resultado-box hidden">
+                <h3>Análisis de Probabilidad Exitoso:</h3>
+                <p>Combinaciones totales: <strong id="resultado-comb-valor">--</strong></p>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
